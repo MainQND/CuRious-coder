@@ -1,0 +1,30 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Rock_paper_scissors {
+    public static void main(String[] args) {
+        int rock=0;
+        int paper =1;
+        int scissors=2;
+        int user; int comp;
+
+        Scanner game = new Scanner(System.in);
+        System.out.println("Choose your move : rock, paper and Scissors");
+        System.out.println("Pick '0' as a Rock, '1' as a paper and '2' as a Scissors");
+        user = game.nextInt();
+
+        Random random = new Random();
+        comp = random.nextInt(3);
+        System.out.println(comp);
+
+        if(user == comp){
+            System.out.println("The match is tied");
+        }
+        else if(user==rock && comp==scissors || user==paper && comp==scissors || user==rock && comp==paper){
+            System.out.println("The Computer Wins");
+        }
+        else{
+            System.out.println("The Player wins");
+        }
+    }
+}
