@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main(){
+     int n,user,guess=1;
+    srand(time(0));
+    n = rand()%100;
+    // printf("%d\n", n);   
+    
+for(int i=1; n!=user; i++){
+       
+       printf("Guess the number\n");
+       scanf("%d", &user);
+    
+        if(user>n){
+            printf("Your number is little higher, Try guessing lower\n");
+        }
+        else if(user==n){
+            printf("You guesses the number in %d tries", guess);
+        }
+        else{
+            printf("Your number is little lower, Try guessing higher\n");
+        }
+        guess++;
+    }
+    return 0;
+}
